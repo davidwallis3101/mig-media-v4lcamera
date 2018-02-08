@@ -1,0 +1,18 @@
+{
+    "author": "GenieLabs/Wallis2000",
+    "version": "v!DO_NOT_EDIT_VERSION!",
+    "title": "mig-media-v4lcamera",
+    "description": "mig-media-v4lcamera",
+    "published": "!DO_NOT_EDIT_RELEASEDATE!",
+    "sourcecode": "",
+    "homepage": "https://github.com/davidwallis3101/mig-media-v4lcamera",
+    "widgets": [],
+    "programs": [],
+    "interfaces": [
+        {
+            "file": "MIG-V4LCamera.zip",
+            "name": "MIG-V4LCamera",
+            "description": "MIG-V4LCamera"
+        }
+    ]
+}
