@@ -19,7 +19,7 @@ build:
   verbosity: minimal
 
 artifacts:
-- path: '\mig-interface-skelton\mig-interface\Output\mig-interface.zip'
+- path: '\*.zip'
 
 deploy:
   release: V$(appveyor_build_version)
