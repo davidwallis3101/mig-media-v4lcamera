@@ -19,11 +19,11 @@ build:
   verbosity: minimal
 
 artifacts:
-- path: '\*.zip'
+- path: '\mig-media-v4lcamera\MIG-V4LCamera\Output\MIG-V4LCamera.zip'
 
 deploy:
   release: V$(appveyor_build_version)
-  description: 'mig-interface-skelton Version $(appveyor_build_version)'
+  description: 'MIG-V4LCamera Version $(appveyor_build_version)'
   provider: GitHub
   auth_token:
     secure: nNJ0tuvMX88/5GPQFV4mtqQe3pRgsJlOd8pvbi0+WeCOsyeNY3L///lRC8pF29wo6J+5b6TPLDDKdKGXveZo9FICP+6k95LkQCvlFzaXb4I=
