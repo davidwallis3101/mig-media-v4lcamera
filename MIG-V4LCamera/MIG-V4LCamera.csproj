@@ -57,7 +57,9 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <AdditionalFiles Include="stylecop.json" />
-    <None Include="package.json" />
+    <Content Include="package.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="v4l\debian64_libCameraCaptureV4L.so">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
