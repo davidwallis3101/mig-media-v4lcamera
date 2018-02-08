@@ -78,11 +78,11 @@ HG.WebApp.SystemSettings.Interfaces['Media.CameraInput'] = {
             var height = resolution.split('x')[1];
             var fps = _this.CameraFps.val();
             HG.Configure.MIG.InterfaceCommand(_this.Id, 'Options.Set', 'Configuration', encodeURIComponent(device + ',' + width + ',' + height + ',' + fps));
-        });        
+        });
         // load current settings
         this.LoadConfiguration();
     },
-    
+
     LoadConfiguration: function() {
         var _this = this;
         HG.Configure.MIG.InterfaceCommand(this.Id, 'Options.Get', 'Configuration', '', function (data) {
@@ -98,19 +98,19 @@ HG.WebApp.SystemSettings.Interfaces['Media.CameraInput'] = {
             }
         });
     },
-    
+
     Localize: function() {
         var configlet = this.Configlet = $('#'+HG.WebApp.SystemSettings.PageId).find('[data-configlet-id="'+this.Id+'"]');
         var userLang = HG.WebApp.Locales.GetUserLanguage();
         // English is the default locale
         var defaultLocale = {
-            "title": 
+            "title":
                  "Camera Device",
-            "configure_interfaces_cameradesc": 
+            "configure_interfaces_cameradesc":
                  "Works with any Video4Linux compatible device on <b>/dev/video0</b> (x64 Ubuntu and Raspberry Pi only).",
-            "configure_interfaces_cameraport": 
+            "configure_interfaces_cameraport":
                  "Device Port",
-            "configure_interfaces_camerasettings": 
+            "configure_interfaces_camerasettings":
                 "Device / Resolution / FPS"
         };
         var locale = defaultLocale;
@@ -119,85 +119,85 @@ HG.WebApp.SystemSettings.Interfaces['Media.CameraInput'] = {
         {
         // German
         case 'de': locale = {
-            "title": 
+            "title":
                 "Camera Device",
-            "configure_interfaces_cameradesc": 
+            "configure_interfaces_cameradesc":
                 "Works with any Video4Linux compatible device on <b>/dev/video0</b> (x64 Ubuntu and Raspberry Pi only).",
-            "configure_interfaces_cameraport": 
+            "configure_interfaces_cameraport":
                 "Device Port",
-            "configure_interfaces_camerasettings": 
+            "configure_interfaces_camerasettings":
                 "Device / Resolution / FPS"
             };
             break;
         // Spanish
         case 'es': locale = {
-            "title": 
+            "title":
                 "Camera Device",
-            "configure_interfaces_cameradesc": 
+            "configure_interfaces_cameradesc":
                 "Works with any Video4Linux compatible device on <b>/dev/video0</b> (x64 Ubuntu and Raspberry Pi only).",
-            "configure_interfaces_cameraport": 
+            "configure_interfaces_cameraport":
                 "Device Port",
-            "configure_interfaces_camerasettings": 
+            "configure_interfaces_camerasettings":
                 "Device / Resolution / FPS"
             };
             break;
         // French
         case 'fr': locale = {
-            "title": 
+            "title":
                 "Caméra",
-            "configure_interfaces_cameradesc": 
+            "configure_interfaces_cameradesc":
                 "Travaille avec n'importe quelle caméra compatible avec Video4Linux sur <b>/dev/video0</b> (x64 Ubuntu et Raspberry Pi seulement).",
-            "configure_interfaces_cameraport": 
+            "configure_interfaces_cameraport":
                 "Port de la caméra",
-            "configure_interfaces_camerasettings": 
+            "configure_interfaces_camerasettings":
                 "Caméra / Résolution / FPS"
             };
             break;
         // Italian
         case 'it': locale = {
-            "title": 
+            "title":
                  "Telecamera",
-            "configure_interfaces_cameradesc": 
+            "configure_interfaces_cameradesc":
                  "Funziona con dispositivi Video4Linux compatibili (solo per x64 Ubuntu e Raspberry Pi).",
-            "configure_interfaces_cameraport": 
+            "configure_interfaces_cameraport":
                  "Porta Dispositivo",
-            "configure_interfaces_camerasettings": 
+            "configure_interfaces_camerasettings":
                 "Dispositivo / Risoluzione / FPS"
             };
             break;
         // Dutch
         case 'nl': locale = {
-            "title": 
+            "title":
                 "Camera Device",
-            "configure_interfaces_cameradesc": 
+            "configure_interfaces_cameradesc":
                 "Works with any Video4Linux compatible device on <b>/dev/video0</b> (x64 Ubuntu and Raspberry Pi only).",
-            "configure_interfaces_cameraport": 
+            "configure_interfaces_cameraport":
                 "Device Port",
-            "configure_interfaces_camerasettings": 
+            "configure_interfaces_camerasettings":
                 "Device / Resolution / FPS"
             };
             break;
         // Russian
         case 'ru': locale = {
-            "title": 
+            "title":
                 "Камера",
-            "configure_interfaces_cameradesc": 
+            "configure_interfaces_cameradesc":
                 "Работает с любыми Video4Linux совместимыми устройствами на <b>/dev/video0</b> (только x64 Ubuntu и Raspberry Pi).",
-            "configure_interfaces_cameraport": 
+            "configure_interfaces_cameraport":
                 "Порт устройства",
-            "configure_interfaces_camerasettings": 
+            "configure_interfaces_camerasettings":
                 "Устройство / Разрешение / FPS"
             };
             break;
         // Swedish
         case 'sv': locale = {
-            "title": 
+            "title":
                 "Kamera Enheter",
-            "configure_interfaces_cameradesc": 
+            "configure_interfaces_cameradesc":
                 "Fungerar med alla Video4Linux kompatibla enheter på <b> / dev/video0 </ b> (Endast x64 Ubuntu och Raspberry Pi).",
-            "configure_interfaces_cameraport": 
+            "configure_interfaces_cameraport":
                 "Enhets Port",
-            "configure_interfaces_camerasettings": 
+            "configure_interfaces_camerasettings":
                 "Device / Resolution / FPS"
             };
             break;
@@ -205,6 +205,5 @@ HG.WebApp.SystemSettings.Interfaces['Media.CameraInput'] = {
         HG.WebApp.Locales.LocalizeElement(this.Configlet, locale);
         this.Locale = locale;
     }
-        
 };
 </script>
