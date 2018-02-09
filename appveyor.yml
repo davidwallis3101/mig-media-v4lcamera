@@ -19,10 +19,10 @@ build:
   verbosity: minimal
 
 after_build:
-- cmd: pwd && dir
+# - cmd: pwd && dir
 
 artifacts:
-- path: '\mig-media-v4lcamera\MIG-V4LCamera\Output\MIG-V4LCamera.zip'
+- path: '\MIG-V4LCamera\Output\MIG-V4LCamera.zip'
 
 deploy:
   release: V$(appveyor_build_version)
