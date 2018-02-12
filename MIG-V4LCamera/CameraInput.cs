@@ -363,7 +363,7 @@ namespace MIG.Interfaces.Media
             /// The CloseCameraStream
             /// </summary>
             /// <param name="source">The <see cref="IntPtr"/></param>
-            [DllImport("CameraCaptureV4L", EntryPoint = "CloseCameraStream")]
+            [DllImport("CameraCaptureV4L.so", EntryPoint = "CloseCameraStream")]
             public static extern void CloseCameraStream(IntPtr source);
 
             /// <summary>
@@ -371,7 +371,7 @@ namespace MIG.Interfaces.Media
             /// </summary>
             /// <param name="source">The <see cref="IntPtr"/>source</param>
             /// <returns>The <see cref="PictureBuffer"/></returns>
-            [DllImport("CameraCaptureV4L", EntryPoint = "GetFrame")]
+            [DllImport("CameraCaptureV4L.so", EntryPoint = "GetFrame")]
             public static extern PictureBuffer GetFrame(IntPtr source);
 
             /// <summary>
@@ -382,7 +382,7 @@ namespace MIG.Interfaces.Media
             /// <param name="height">The <see cref="uint"/>height in pixels</param>
             /// <param name="fps">The <see cref="uint"/>frames per second</param>
             /// <returns>The <see cref="IntPtr"/></returns>
-            [DllImport("CameraCaptureV4L", EntryPoint = "OpenCameraStream")]
+            [DllImport("CameraCaptureV4L.so", EntryPoint = "OpenCameraStream")]
             public static extern IntPtr OpenCameraStream(string device, uint width, uint height, uint fps);
 
             /// <summary>
@@ -393,7 +393,7 @@ namespace MIG.Interfaces.Media
             /// <param name="height">The <see cref="uint"/>height in pixels</param>
             /// <param name="jpegQuantity">The <see cref="uint"/>quantity of images</param>
             /// <returns>The <see cref="PictureBuffer"/></returns>
-            [DllImport("CameraCaptureV4L", EntryPoint = "TakePicture")]
+            [DllImport("CameraCaptureV4L.so", EntryPoint = "TakePicture")]
             public static extern PictureBuffer TakePicture(string device, uint width, uint height, uint jpegQuantity);
         }
 
